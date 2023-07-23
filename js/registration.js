@@ -5,6 +5,9 @@ const formControls = document.querySelectorAll(".form-control");
 const createbtn = document.getElementById("createAccount");
 const toLogin = document.getElementById("toLogin");
 
+toLogin.lastChild.style.textDecoration = "none";
+
+
 const btn = document.querySelector(".form-container .btn-group .btn");
 
 // console.log(formControls);
@@ -66,6 +69,8 @@ const changeForm = function (){
         createbtn.classList.replace("create-btn", "login-btn");
         createbtn.value = "Login";
 
+        toLogin.firstChild.textContent = "You Don't have an account?";
+
         toLogin.lastChild.textContent = "Create Account!";
     
     }else{
@@ -85,6 +90,8 @@ const changeForm = function (){
         createbtn.id = "createAccount";
         createbtn.classList.replace("login-btn", "create-btn");
         createbtn.value = "Create Account";
+
+        toLogin.firstChild.textContent = "Already Have an account?";
 
         toLogin.lastChild.textContent = "Login!";
     }       
